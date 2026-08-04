@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vishal Sharma | Video Editor Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- GSAP for smooth animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+
+  <!-- 3D Canvas Background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Navigation Layer -->
+  <header class="navbar">
+    <div class="logo">VISHAL<span>.EDIT</span></div>
+    <nav>
+      <a href="#vX-main-wrapper" class="nav-link">Work</a>
+      <a href="#about1" class="nav-link">About</a>
+      <a href="#contact" class="nav-btn">Let's Talk</a>
+    </nav>
+  </header>
+
+  <!-- Intro / Hero Section -->
+  <section id="about1" class="hero-section">
+    
+    <!-- Left Column: Typography & Bio -->
+    <div id="about" class="hero-content">
+      <div class="badge">
+        <span class="pulse"></span> Open for Freelance & Projects
+      </div>
+      <h1 class="glitch-text">
+        CRAFTING <br />
+        <span class="gradient-text">HIGH-RETENTION</span> <br />
+        VISUAL STORIES
+      </h1>
+      <p class="hero-subtext">
+        Video Editor & Visual Storyteller. Transforming raw footage into viral short-form content, sleek brand edits, and dynamic color-graded experiences.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#vX-main-wrapper" class="btn btn-primary">
+          <span>Watch Showreel</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+        </a>
+        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+      </div>
+
+      <!-- <div class="hero-stats">
+        <div class="stat-item">
+          <h3>50M+</h3>
+          <p>Total Views</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <h3>200+</h3>
+          <p>Videos Edited</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <h3>99%</h3>
+          <p>Client Retention</p>
+        </div>
+      </div> -->
+    </div>
+
+    <!-- Right Column: Interactive 3D Glass Portrait Card -->
+    <div class="hero-visual">
+      <div class="portrait-card" id="tilt-card">
+        <div class="card-glow"></div>
+        <!-- Replace src with your image path -->
+        <img src="vishal.png" alt="Vishal Sharma - Video Editor" class="portrait-img" />
+        <div class="card-overlay">
+          <div class="card-info">
+            <p class="role">Video Editor / Storyteller</p>
+            <h3>Vishal Sharma</h3>
+          </div>
+          <div class="status-indicator">
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- <section class="work-section" id="work">
+    <div class="work-header">
+      <div class="badge">Portfolio</div>
+      <h2 class="gradient-text">SELECT EDITS</h2>
+      <p>A showcase of high-pacing narratives, viral short-form storytelling, and sleek podcast productions.</p>
+      
+      <div class="work-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="yt">YouTube Long</button>
+        <button class="filter-btn" data-filter="short">Vertical Reels</button>
+        <button class="filter-btn" data-filter="podcast">Podcast</button>
+      </div>
+    </div>
+
+    <div class="work-showcase-container" id="work-3d-grid"></div>
+
+    <div class="video-modal" id="video-modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="iframe-container">
+          <iframe id="modal-iframe" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="modal-info">
+          <h3 id="modal-title">Project Title</h3>
+          <p id="modal-desc">Project Description/Role</p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <div id="vX-main-wrapper">
+    <!-- HEADER -->
+    <div class="vX-hero-header">
+      <div class="badge">Portfolio</div>
+      <h2 class="gradient-text">FEATURED SHOWCASE</h2>
+    <!-- <p>18 Select Projects Across Long-Form, Short-Form, and Podcast Productions.</p> -->
+      <!-- <h2 class="gradient-text">SELECT EDITS</h2> -->
+      <p>A showcase of high-pacing narratives, viral short-form storytelling, and sleek podcast productions.</p>
+      <!-- <h2>Crafted to Engage & <span class="vX-glow-text">Convert</span></h2> -->
+      <p>High-retention vertical edits & cinema-grade narratives.</p>
+
+      <!-- FILTER TABS -->
+      <div class="vX-nav-switcher">
+        <button class="vX-nav-btn vX-active" data-vx-target="all">All Edits</button>
+        <button class="vX-nav-btn" data-vx-target="short">Short Form (Reels/Shorts)</button>
+        <button class="vX-nav-btn" data-vx-target="long">Long Form</button>
+      </div>
+    </div>
+
+    <!-- SHORTS SECTION -->
+    <div class="vX-sec-group" data-vx-type="short">
+      <div class="vX-head-row">
+        <h3 class="vX-head-title">⚡ SHORT FORM & REELS</h3>
+        <span class="vX-head-badge">High Retention • Dynamic Captions</span>
+      </div>
+
+      <div class="vX-shorts-deck">
+        <div class="vX-reel-tile">
+          <div class="vX-frame-9-16">
+            <video loop muted playsinline poster="poster3.png" src="https://veloracreativesltd.my.canva.site/_assets/video/7b99f0c4257251c9a333a9e561d91ad5.mp4" controls playsinline></video>
+          </div>
+          <h4 class="vX-reel-caption">Anime Edit</h4>
+        </div>
+
+        <div class="vX-reel-tile">
+          <div class="vX-frame-9-16">
+            <video loop muted playsinline poster="poster4.png" src="https://veloracreativesltd.my.canva.site/_assets/video/2db312aa06d1ad3a04b66ad52eecdd04.mp4" controls playsinline></video>
+          </div>
+          <h4 class="vX-reel-caption">Subtitles Edit</h4>
+        </div>
+
+        <div class="vX-reel-tile">
+          <div class="vX-frame-9-16">
+            <video loop muted playsinline poster="poster44.png" src="https://veloracreativesltd.my.canva.site/_assets/video/bc948eb245afa4c341dc4e7703398aff.mp4" controls playsinline></video>
+          </div>
+          <h4 class="vX-reel-caption">Gorilla X King Edit</h4>
+        </div>
+
+        <div class="vX-reel-tile">
+          <div class="vX-frame-9-16">
+            <video loop muted playsinline poster="poster5.png" src="https://veloracreativesltd.my.canva.site/_assets/video/133db28937336ca75812072f9229c27a.mp4" controls playsinline></video>
+          </div>
+          <h4 class="vX-reel-caption">Podcast Clip</h4>
+        </div>
+        <div class="vX-reel-tile">
+          <div class="vX-frame-9-16">
+            <video loop muted playsinline poster="poster56.png" src="https://veloracreativesltd.my.canva.site/_assets/video/1d6ca1758cd735195d363c8995eee68f.mp4" controls playsinline></video>
+          </div>
+          <h4 class="vX-reel-caption">Motion Graphic</h4>
+        </div>
+        <div class="vX-reel-tile">
+          <div class="vX-frame-9-16">
+            <video loop muted playsinline poster="poster66.png" src="https://veloracreativesltd.my.canva.site/_assets/video/f58147b48c1974932d6c14862cca2d8f.mp4" controls playsinline></video>
+          </div>
+          <h4 class="vX-reel-caption">Mr.Beast Clip</h4>
+        </div>
+        <div class="vX-reel-tile">
+          <div class="vX-frame-9-16">
+            <video loop muted playsinline poster="poster1.png" src="https://veloracreativesltd.my.canva.site/_assets/video/28689e1d04a3eccc3347b92582165453.mp4" controls playsinline></video>
+          </div>
+          <h4 class="vX-reel-caption">Mr.Beast Clip</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- LONG FORM SECTION -->
+    <div class="vX-sec-group" data-vx-type="long">
+      <div class="vX-head-row">
+        <h3 class="vX-head-title">🎬 LONG FORM & CINEMATIC EDITS</h3>
+        <span class="vX-head-badge">Storytelling • Color Grade</span>
+      </div>
+
+      <div class="vX-cinema-deck">
+        <div class="vX-cinema-tile">
+          <div class="vX-frame-16-9">
+            <video poster="ani.png" src="https://veloracreativesltd.my.canva.site/_assets/video/e9c13da9ec56cbec4ee45c51e841d592.mp4" controls preload="metadata"></video>
+          </div>
+          <div class="vX-cinema-meta">
+            <h3>Animated Video</h3>
+            <!-- <p>Custom motion graphics & fluid pace editing.</p> -->
+          </div>
+        </div>
+
+        <div class="vX-cinema-tile">
+          <div class="vX-frame-16-9">
+            <video poster="pod.png" src="https://veloracreativesltd.my.canva.site/_assets/video/b6355c786ae27634d7a99373454fa1b0.mp4" controls preload="metadata"></video>
+          </div>
+          <div class="vX-cinema-meta">
+            <h3>Full Podcast Production</h3>
+            <!-- <p>Multi-cam switching & ambient sound design.</p> -->
+          </div>
+        </div>
+        <div class="vX-cinema-tile">
+          <div class="vX-frame-16-9">
+            <video poster="motiongrap.png" src="https://veloracreativesltd.my.canva.site/_assets/video/6e89a4d585e9f4515ea0caeb68ad0e5e.mp4" controls preload="metadata"></video>
+          </div>
+          <div class="vX-cinema-meta">
+            <h3>Motion Graphics</h3>
+            <!-- <p>Multi-cam switching & ambient sound design.</p> -->
+          </div>
+        </div>
+        <div class="vX-cinema-tile">
+          <div class="vX-frame-16-9">
+            <video poster="doc.png" src="https://veloracreativesltd.my.canva.site/_assets/video/6ab5d8304654fa274bb34d8cbbf9e1a6.mp4" controls preload="metadata"></video>
+          </div>
+          <div class="vX-cinema-meta">
+            <h3>Documentary Edit</h3>
+            <!-- <p>Multi-cam switching & ambient sound design.</p> -->
+          </div>
+        </div>
+        <div class="vX-cinema-tile">
+          <div class="vX-frame-16-9">
+            <video poster="ad.png" src="https://veloracreativesltd.my.canva.site/_assets/video/c8de8baf289b9b3784e43e6ffdc217ee.mp4" controls preload="metadata"></video>
+          </div>
+          <div class="vX-cinema-meta">
+            <h3>Advertisment Edit</h3>
+            <!-- <p>Multi-cam switching & ambient sound design.</p> -->
+          </div>
+        </div>
+        <div class="vX-cinema-tile">
+          <div class="vX-frame-16-9">
+            <video poster="louis.png" src="https://veloracreativesltd.my.canva.site/_assets/video/9cc32d2f0852554d19a6e707e022e567.mp4" controls preload="metadata"></video>
+          </div>
+          <div class="vX-cinema-meta">
+            <h3>LV Documentary</h3>
+            <!-- <p>Multi-cam switching & ambient sound design.</p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: WORKFLOW & EDITING PROCESS -->
+<section class="workflow-section" id="workflow">
+  <!-- Ambient Background Glows -->
+  <!-- <div class="bg-glow-orb orb-workflow-1"></div>
+  <div class="bg-glow-orb orb-workflow-2"></div> -->
+
+  <div class="workflow-container">
+    <!-- Section Header -->
+    <div class="workflow-header">
+      <span class="badge-pill">
+        <span class="pulse-dot"></span> The Process
+      </span>
+      <h2>From Raw Footage to <span class="text-gradient">Viral Release</span></h2>
+      <p>A streamlined, stress-free 4-step workflow engineered for high quality, fast turnarounds, and seamless communication.</p>
+    </div>
+
+    <!-- Timeline Grid / Sequence -->
+    <div class="workflow-timeline">
+
+      <!-- STEP 1 -->
+      <div class="workflow-step" data-step="1">
+        <div class="step-node">
+          <span class="node-number">01</span>
+          <div class="node-glow"></div>
+        </div>
+        <div class="step-card">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          </div>
+          <h3>Footage Intake & Strategy</h3>
+          <p>Upload raw clips via Drive, Frame.io, or Dropbox. We review brand guidelines, audience demographics, target platforms, and reference styles.</p>
+          <div class="step-tag">Step 01 • Onboarding</div>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="workflow-step" data-step="2">
+        <div class="step-node">
+          <span class="node-number">02</span>
+          <div class="node-glow"></div>
+        </div>
+        <div class="step-card">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <h3>Story Cut & Dynamic Pacing</h3>
+          <p>Trimming filler and silences to build an unbeatable hook. Crafting the narrative arc, pacing, sound effects, and kinetic text placement.</p>
+          <div class="step-tag glow-magenta">Step 02 • Core Edit</div>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="workflow-step" data-step="3">
+        <div class="step-node">
+          <span class="node-number">03</span>
+          <div class="node-glow"></div>
+        </div>
+        <div class="step-card">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94"/></svg>
+          </div>
+          <h3>Polish, VFX & Audio Mastery</h3>
+          <p>Cinema-grade color grading, 2D/3D motion graphics, lower thirds, custom B-roll integration, and broadcast audio enhancement.</p>
+          <div class="step-tag glow-purple">Step 03 • Magic Touch</div>
+        </div>
+      </div>
+
+      <!-- STEP 4 -->
+      <div class="workflow-step" data-step="4">
+        <div class="step-node">
+          <span class="node-number">04</span>
+          <div class="node-glow"></div>
+        </div>
+        <div class="step-card">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3>Review, Tweaks & Final Delivery</h3>
+          <p>Collaborative feedback loop via timecoded review links. Once approved, receive full 4K exports optimized for YouTube, Instagram, or TikTok.</p>
+          <div class="step-tag glow-green">Step 04 • Final Export</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 5: TESTIMONIALS & RESULTS -->
+<!-- <section class="testimonials-section" id="testimonials">
+  
+
+  <div class="testimonials-container">
+    <div class="testimonials-header">
+      <span class="badge-pill">
+        <span class="pulse-dot"></span> Proven Results
+      </span>
+      <h2>Trusted by Creators & <span class="text-gradient">Growth Brands</span></h2>
+      <p>Here is what creators, agency founders, and brand channels say about the turnaround speed, edit quality, and retention boost.</p>
+    </div>
+
+      <div class="stat-card">
+        <div class="stat-value"><span class="counter" data-target="15">0</span>M+</div>
+        <div class="stat-label">Total Views Generated</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value"><span class="counter" data-target="250">0</span>+</div>
+        <div class="stat-label">Videos Delivered</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value"><span class="counter" data-target="98">0</span>%</div>
+        <div class="stat-label">Client Retention Rate</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value"><span class="counter" data-target="24">0</span>h</div>
+        <div class="stat-label">Avg Short-Form Turnaround</div>
+      </div>
+    </div> 
+
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card">
+        <div class="card-quote-icon">“</div>
+        <div class="star-rating">
+          ★★★★★
+        </div>
+        <p class="testimonial-text">
+          "The retention on our YouTube Shorts jumped by over 40% in the first two weeks. The hook edits and dynamic captions are pure magic. Easily the best investment for our channel growth."
+        </p>
+        <div class="client-profile">
+          <div class="avatar-placeholder">
+            <span>JM</span>
+          </div>
+          <div class="client-info">
+            <h4>Jason Miller</h4>
+            <p>Tech Creator • 180K Subscribers</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card featured-testimonial">
+        <div class="card-quote-icon">“</div>
+        <div class="star-rating">
+          ★★★★★
+        </div>
+        <p class="testimonial-text">
+          "Working with Khushi cut our video production stress in half. Every edit comes back crisp, color-graded, and perfectly paced for TikTok and Reels without needing endless revisions."
+        </p>
+        <div class="client-profile">
+          <div class="avatar-placeholder glow-magenta">
+            <span>SR</span>
+          </div>
+          <div class="client-info">
+            <h4>Sarah Reynolds</h4>
+            <p>Founder, Apex Media Agency</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="card-quote-icon">“</div>
+        <div class="star-rating">
+          ★★★★★
+        </div>
+        <p class="testimonial-text">
+          "The attention to sound design and motion graphics transformed our long-form documentary videos from average to broadcast-level quality. Turnaround time is ridiculously fast!"
+        </p>
+        <div class="client-profile">
+          <div class="avatar-placeholder glow-purple">
+            <span>DK</span>
+          </div>
+          <div class="client-info">
+            <h4>David K.</h4>
+            <p>Finance & Business Podcaster</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section> -->
+
+<!-- SECTION 6: CONTACT & BOOKING FORM -->
+<section class="contact-section" id="contact">
+  <div class="bg-glow-orb orb-4"></div>
+
+  <div class="contact-container">
+    
+    <!-- Left Column: Info & Socials -->
+    <div class="contact-info">
+      <span class="badge-pill">
+        <span class="pulse-dot"></span> Let's Connect
+      </span>
+      <h2>Ready to <span class="text-gradient">Scale Your Content?</span></h2>
+      <p>Have a project in mind, need a custom retainer, or just want to chat about video editing? Drop a message and let's make it happen.</p>
+
+      <div class="info-items">
+        <div class="info-item">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <h4>Email Directly</h4>
+            <a href="mailto:your.email@example.com">dinoj0027@example.com</a>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <h4>Response Time</h4>
+            <p>Within 12–24 Hours</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+</svg>
+          </div>
+          <div>
+            <h4>Call</h4>
+            <p>+91 9389875216</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Links -->
+      <div class="contact-socials">
+        <h4>Follow & Reach Out</h4>
+        <div class="social-links">
+          <a href="#" target="_blank" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" target="_blank" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+          </a>
+          <a href="#" target="_blank" aria-label="Twitter / X">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Interactive Booking Form -->
+    <div class="contact-form-card">
+      <form id="portfolioContactForm" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" placeholder="John Doe" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" placeholder="john@example.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="serviceType">Service Needed</label>
+          <select id="serviceType" required>
+            <option value="" disabled selected>Select a package or service</option>
+            <option value="shorts">Short-Form / Reels Pack</option>
+            <option value="youtube">YouTube Growth Engine (Long-form)</option>
+            <option value="motion">Motion Graphics & Animation</option>
+            <option value="custom">Custom Brand Retainer</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Project Details / Footage Link</label>
+          <textarea id="message" rows="4" placeholder="Tell me about your vision, video length, timeline, or drop a drive link..." required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          <span>Send Message</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+
+        <!-- Success Feedback Message -->
+        <div id="formSuccess" class="form-success-msg">
+          ✨ Message sent successfully! I'll get back to you soon.
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+  <script src="demo.js"></script>
+</body>
+</html>

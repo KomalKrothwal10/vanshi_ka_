@@ -1,0 +1,184 @@
+[
+  {
+    "id": "yt-1",
+    "type": "yt",
+    "ratio": "169",
+    "title": "Tech Review Edit",
+    "role": "Fast Pacing, Motion Graphics",
+    "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+    "embedId": "dQw4w9WgXcQ",
+    "position": { "x": -5, "y": 3, "z": -1 }
+  },
+  {
+    "id": "yt-2",
+    "type": "yt",
+    "ratio": "169",
+    "title": "Travel Vlog Story",
+    "role": "Color Grading, Sound Design",
+    "thumbnail": "https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=800&q=80",
+    "embedId": "3JZ_D3ELwOQ",
+    "position": { "x": -2, "y": 3, "z": -1 }
+  },
+  {
+    "id": "yt-3",
+    "type": "yt",
+    "ratio": "169",
+    "title": "Gaming Montage",
+    "role": "VFX & High Energy Edits",
+    "thumbnail": "https://images.unsplash.com/photo-1542382257-80dedb725088?w=800&q=80",
+    "embedId": "r4dD-XzP6U8",
+    "position": { "x": 1, "y": 3, "z": -1 }
+  },
+  {
+    "id": "yt-4",
+    "type": "yt",
+    "ratio": "169",
+    "title": "Documentary Style",
+    "role": "Story Arc & B-Roll Sync",
+    "thumbnail": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&q=80",
+    "embedId": "dQw4w9WgXcQ",
+    "position": { "x": 4, "y": 3, "z": -1 }
+  },
+  {
+    "id": "yt-5",
+    "type": "yt",
+    "ratio": "169",
+    "title": "Product Commercial",
+    "role": "3D Text, Sleek Transitions",
+    "thumbnail": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80",
+    "embedId": "3JZ_D3ELwOQ",
+    "position": { "x": 7, "y": 3, "z": -1 }
+  },
+  {
+    "id": "yt-6",
+    "type": "yt",
+    "ratio": "169",
+    "title": "Educational Essay",
+    "role": "Kinetic Typography",
+    "thumbnail": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80",
+    "embedId": "r4dD-XzP6U8",
+    "position": { "x": 10, "y": 3, "z": -1 }
+  },
+
+  {
+    "id": "short-1",
+    "type": "short",
+    "ratio": "916",
+    "title": "Viral Reel Hook",
+    "role": "Retention Subtitles & Cuts",
+    "thumbnail": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80",
+    "embedId": "4M5pM-v3Ruw",
+    "position": { "x": -5, "y": 0, "z": 1 }
+  },
+  {
+    "id": "short-2",
+    "type": "short",
+    "ratio": "916",
+    "title": "Brand Promo Cut",
+    "role": "Dynamic Speed Ramping",
+    "thumbnail": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+    "embedId": "wS_G1M6J5oY",
+    "position": { "x": -2, "y": 0, "z": 1 }
+  },
+  {
+    "id": "short-3",
+    "type": "short",
+    "ratio": "916",
+    "title": "Fitness Challenge Reel",
+    "role": "Beat Sync & SFX",
+    "thumbnail": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800&q=80",
+    "embedId": "8K0M-jL4U3c",
+    "position": { "x": 1, "y": 0, "z": 1 }
+  },
+  {
+    "id": "short-4",
+    "type": "short",
+    "ratio": "916",
+    "title": "Talking Head Shorts",
+    "role": "B-Roll Popups & Captions",
+    "thumbnail": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=800&q=80",
+    "embedId": "4M5pM-v3Ruw",
+    "position": { "x": 4, "y": 0, "z": 1 }
+  },
+  {
+    "id": "short-5",
+    "type": "short",
+    "ratio": "916",
+    "title": "SaaS Product Reel",
+    "role": "Screen Motion Graphics",
+    "thumbnail": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
+    "embedId": "wS_G1M6J5oY",
+    "position": { "x": 7, "y": 0, "z": 1 }
+  },
+  {
+    "id": "short-6",
+    "type": "short",
+    "ratio": "916",
+    "title": "Podcast Highlight Reel",
+    "role": "Hook Extraction",
+    "thumbnail": "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=800&q=80",
+    "embedId": "8K0M-jL4U3c",
+    "position": { "x": 10, "y": 0, "z": 1 }
+  },
+
+  {
+    "id": "podcast-1",
+    "type": "podcast",
+    "ratio": "169",
+    "title": "Creator Podcast Ep. 12",
+    "role": "Multicam Sync & Clean Audio",
+    "thumbnail": "https://img.youtube.com/vi/jNQXAC9IVRw/maxresdefault.jpg",
+    "embedId": "jNQXAC9IVRw",
+    "position": { "x": -5, "y": -3, "z": -2 }
+  },
+  {
+    "id": "podcast-2",
+    "type": "podcast",
+    "ratio": "169",
+    "title": "Business Interview",
+    "role": "Lower Thirds & Color Fix",
+    "thumbnail": "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&q=80",
+    "embedId": "A6XUVjK85II",
+    "position": { "x": -2, "y": -3, "z": -2 }
+  },
+  {
+    "id": "podcast-3",
+    "type": "podcast",
+    "ratio": "169",
+    "title": "Tech Talk Panel",
+    "role": "Audio Mastering & Cutdowns",
+    "thumbnail": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800&q=80",
+    "embedId": "jNQXAC9IVRw",
+    "position": { "x": 1, "y": -3, "z": -2 }
+  },
+  {
+    "id": "podcast-4",
+    "type": "podcast",
+    "ratio": "169",
+    "title": "Founder Stories Ep. 4",
+    "role": "Full Episode Edit",
+    "thumbnail": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80",
+    "embedId": "A6XUVjK85II",
+    "position": { "x": 4, "y": -3, "z": -2 }
+  },
+  {
+    "id": "podcast-5",
+    "type": "podcast",
+    "ratio": "169",
+    "title": "Design Talk Session",
+    "role": "Multicam Switching",
+    "thumbnail": "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80",
+    "embedId": "jNQXAC9IVRw",
+    "position": { "x": 7, "y": -3, "z": -2 }
+  },
+  {
+    "id": "podcast-6",
+    "type": "podcast",
+    "ratio": "169",
+    "title": "Solo Show Highlights",
+    "role": "Graphic Overlays",
+    "thumbnail": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80",
+    "embedId": "A6XUVjK85II",
+    "position": { "x": 10, "y": -3, "z": -2 }
+  }
+]
