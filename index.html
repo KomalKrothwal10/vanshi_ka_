@@ -508,15 +508,19 @@
 
     <!-- Right Column: Interactive Booking Form -->
     <div class="contact-form-card">
-      <form id="portfolioContactForm" onsubmit="handleFormSubmit(event)">
+      <form action="https://api.web3forms.com/submit" id="portfolioContactForm" method="POST">
+        <input type="hidden" name="access_key" value="ff214a25-1671-4a20-9560-d4f3293cb3f5">
+
+        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+        
         <div class="form-group">
           <label for="name">Your Name</label>
-          <input type="text" id="name" placeholder="John Doe" required />
+          <input name="name" type="text" id="name" placeholder="John Doe" required />
         </div>
 
         <div class="form-group">
           <label for="email">Your Email</label>
-          <input type="email" id="email" placeholder="john@example.com" required />
+          <input name="email" type="email" id="email" placeholder="john@example.com" required />
         </div>
 
         <div class="form-group">
